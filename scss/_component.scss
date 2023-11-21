@@ -1,0 +1,93 @@
+.s-ticket {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ticket {
+        max-width: 40rem;
+        background-color: var(--gray-100);
+        border-radius: 1.3rem;
+        overflow: hidden;
+        .image {
+            position: relative;
+            width: 100%;
+            height: 33.8rem;
+            span {
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
+                border-radius: 0.5rem;
+                background: #9E00FF;
+                padding: 0.5rem 1.5rem;
+                color: var(--gray-100);
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: 2.875rem; /* 191.667% */
+                text-transform: uppercase;
+            }
+        }
+        .info {
+            padding: 2.5rem 2rem;
+            h1 {
+                color: var(--gray-400);
+                font-family: 'Poppins', sans-serif;
+                font-size: 2.7rem;
+                font-weight: 700;
+                line-height: 3.2rem; /* 111.864% */
+            }
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem 0;
+                margin-top: 2rem;
+                li {
+                    span {
+                        display: block;
+                        color: var(--gray-300);
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        margin-bottom: 0.3rem;
+                    }
+                    strong {
+                        color: var(--gray-400);
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .bar-code {
+            position: relative;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px dashed #999999;
+            &::before {
+                content: "";
+                width: 4rem;
+                height: 4rem;
+                background-color: var(--gray-500);
+                position: absolute;
+                left: -3.2rem;
+                top: -2rem;
+                border-radius: 50%;
+            }
+            &::after {
+                content: "";
+                width: 4rem;
+                height: 4rem;
+                background-color: var(--gray-500);
+                position: absolute;
+                right: -3.2rem;
+                top: -2rem;
+                border-radius: 50%;
+            }
+            img {
+                max-width: 20rem;
+            }
+        }
+    }
+
+}
